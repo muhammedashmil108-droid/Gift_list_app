@@ -12,7 +12,8 @@ class _SplashscreenState extends State<Splashscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("Bismillah",style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold),),
+        child: Text("Bismillah",style: TextStyle(fontSize: 55,fontWeight: FontWeight.bold),
+        ),
       ),
     );
   }
