@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gift_list_app/Colors/appcolour.dart';
 
+import 'package:gift_list_app/navigations/movepage.dart';
+
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
 
@@ -9,7 +11,20 @@ class Splashscreen extends StatefulWidget {
 }
 
 class _SplashscreenState extends State<Splashscreen> {
+
   @override
+  void initState()
+{
+  super.initState();
+
+Future.delayed(Duration(seconds: 4),(){
+if(!mounted)return;
+
+Movepage.goToLogin(context);
+});
+
+} 
+ @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
