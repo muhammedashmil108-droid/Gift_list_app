@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gift_list_app/splash.dart';
+import 'package:gift_list_app/Veiw/splashscreen.dart';
+
 
 void main(){
   runApp(GiftListApp());
@@ -12,7 +13,7 @@ class GiftListApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Splashscreen(),
+      home:Splashscreen(),
     );
   }
 }
