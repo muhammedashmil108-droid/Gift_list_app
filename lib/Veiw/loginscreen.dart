@@ -63,6 +63,8 @@ Text(
 
  SizedBox(height: 52,),
 
+
+// Email TextFormFeild
  TextFormField(
 decoration: InputDecoration(
   hintText: "Enter your email",
@@ -70,6 +72,38 @@ decoration: InputDecoration(
   border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))
 ),
  ),
+
+ SizedBox(height: 10,),
+
+// Password TextFormFeild
+
+TextFormField(
+  decoration: InputDecoration(
+    hintText: "Enter your password",
+    prefixIcon: Icon(Icons.lock_outline),
+    border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))
+  ),
+),
+
+
+// Forget Password
+Align(
+  alignment: Alignment.centerRight,
+  child: TextButton(
+    onPressed: (){},
+     child: Text(
+      "Forget password?",
+      style: TextStyle(
+        color: Colors.blue,
+        fontSize: 12,
+        fontWeight:FontWeight.w600,
+        decoration: TextDecoration.underline,
+        decorationColor: Colors.blue,
+      ),
+     ),
+     ),
+)
+
 
               ],
             ),
