@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gift_list_app/Colors/appcolour.dart';
+import 'package:gift_list_app/navigations/movepage.dart';
 
 class Loginscreen extends StatefulWidget {
   const Loginscreen({super.key});
@@ -9,6 +10,22 @@ class Loginscreen extends StatefulWidget {
 }
 
 class _LoginscreenState extends State<Loginscreen> {
+
+  final _formkey = GlobalKey<FormState>();
+
+  final usernameController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  // LOGIN FUNCTION
+  void login(){
+    if(_formkey.currentState!.validate()){
+      if(usernameController.text == 'ashmil' &&
+      passwordController.text == '1234'){
+
+     Movepage.goToHome(context);
+      }
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,11 +83,18 @@ Text(
 
 // Email TextFormFeild
  TextFormField(
+  controller: usernameController,
 decoration: InputDecoration(
   hintText: "Enter your email",
   prefixIcon: Icon(Icons.email_outlined),
   border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))
 ),
+validator: (value) {
+  if(value == null || value.isEmpty){
+    return 'Please enter username';
+  } 
+  return null;
+},
  ),
 
  SizedBox(height: 10,),
@@ -78,11 +102,18 @@ decoration: InputDecoration(
 // Password TextFormFeild
 
 TextFormField(
+  controller: passwordController,
   decoration: InputDecoration(
     hintText: "Enter your password",
     prefixIcon: Icon(Icons.lock_outline),
     border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))
   ),
+  validator: (value) {
+    if(value == null || value.isEmpty){
+      return 'Please enter password';
+    }
+    return null;
+  },
 ),
 
 
