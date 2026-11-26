@@ -113,7 +113,7 @@ height: 45,
 child: ElevatedButton(
   onPressed: (){},
   style: ElevatedButton.styleFrom(
-    backgroundColor:  Color(0xFF7546C8),
+    backgroundColor: MainColour.Purple,
     foregroundColor: Colors.white,
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(10)
@@ -123,7 +123,7 @@ child: ElevatedButton(
    ),
 ),
 
-SizedBox(height: 15,),
+SizedBox(height: 20,),
 
 // Sign Up button
 SizedBox(
@@ -150,7 +150,7 @@ SizedBox(
           'Sign up',
           style: TextStyle(
             fontSize: 18,
-            color:  Color(0xFF7546C8),
+            color: MainColour.Purple,
             fontWeight: FontWeight.bold,
             decoration: TextDecoration.underline,
           ),
