@@ -33,8 +33,8 @@ SizedBox(height: 25,),
 
 Image.asset(
   'assets/images/giftbox.png',
-  height: 110,
-  width: 110,
+  height: 140,
+  width: 140,
   fit: BoxFit.contain,
 ),
 
@@ -56,12 +56,12 @@ Text(
  Text(
   "Login to continue",
   style: TextStyle(
-    fontSize: 15,
+    fontSize: 18,
     color: Colors.black
   ),
  ),
 
- SizedBox(height: 52,),
+ SizedBox(height: 60,),
 
 
 // Email TextFormFeild
@@ -95,14 +95,70 @@ Align(
       "Forget password?",
       style: TextStyle(
         color: Colors.blue,
-        fontSize: 12,
+        fontSize: 16,
         fontWeight:FontWeight.w600,
         decoration: TextDecoration.underline,
         decorationColor: Colors.blue,
       ),
      ),
      ),
-)
+),
+
+SizedBox(height: 30,),
+
+// Login Button
+SizedBox(
+width: double.infinity,
+height: 45,
+child: ElevatedButton(
+  onPressed: (){},
+  style: ElevatedButton.styleFrom(
+    backgroundColor:  Color(0xFF7546C8),
+    foregroundColor: Colors.white,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(10)
+    )
+  ),
+   child: Text("Login"),
+   ),
+),
+
+SizedBox(height: 15,),
+
+// Sign Up button
+SizedBox(
+  width: double.infinity,
+  height: 55,
+  child: ElevatedButton(
+    onPressed: () {},
+    style: ElevatedButton.styleFrom(
+      backgroundColor: Colors.white,
+      foregroundColor: Colors.black,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+    ),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+         Text(
+          "Don't you have any account?",
+          style: TextStyle(fontSize: 12),
+        ),
+         Text(
+          'Sign up',
+          style: TextStyle(
+            fontSize: 14,
+            color:  Color(0xFF7546C8),
+            fontWeight: FontWeight.bold,
+            decoration: TextDecoration.underline,
+          ),
+        ),
+      ],
+    ),
+  ),
+),
+
 
 
               ],
