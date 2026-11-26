@@ -15,5 +15,5 @@ class AppColour {
 
 class MainColour {
   
-  static const Color Purple = Color(0xFF7546C8);
+  static const Color purple = Color(0xFF7546C8);
 }
