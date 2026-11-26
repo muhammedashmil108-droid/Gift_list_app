@@ -23,6 +23,10 @@ class _LoginscreenState extends State<Loginscreen> {
       passwordController.text == '1234'){
 
      Movepage.goToHome(context);
+      }else{
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("Invalid user or password"))
+        );
       }
     }
   }
@@ -147,7 +151,7 @@ SizedBox(
 width: double.infinity,
 height: 45,
 child: ElevatedButton(
-  onPressed: (){},
+  onPressed: login,
   style: ElevatedButton.styleFrom(
     backgroundColor: MainColour.purple,
     foregroundColor: Colors.white,
