@@ -31,6 +31,12 @@ class _LoginscreenState extends State<Loginscreen> {
     }
   }
   @override
+void dispose() {
+  usernameController.dispose();
+  passwordController.dispose();
+  super.dispose();
+}
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
@@ -99,7 +105,9 @@ decoration: InputDecoration(
 validator: (value) {
   if(value == null || value.isEmpty){
     return 'Please enter username';
-  } 
+  } else if(!RegExp(r'^[a-zA-Z]+$').hasMatch(value)) {
+    return "username must contain only letter";
+  }
   return null;
 },
  ),
@@ -110,6 +118,7 @@ validator: (value) {
 
 TextFormField(
   controller: passwordController,
+  obscureText: true,
   decoration: InputDecoration(
     hintText: "Enter your password",
     prefixIcon: Icon(Icons.lock_outline),
@@ -118,6 +127,8 @@ TextFormField(
   validator: (value) {
     if(value == null || value.isEmpty){
       return 'Please enter password';
+    }else if(!RegExp(r'^[0-9]{4}$').hasMatch(value)){
+      return "Password must contain exactly 4 digits";
     }
     return null;
   },
