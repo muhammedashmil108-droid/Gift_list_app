@@ -127,6 +127,7 @@ SizedBox(height: 15,),
 
 // Sign Up button
 SizedBox(
+  
   width: double.infinity,
   height: 55,
   child: ElevatedButton(
@@ -143,12 +144,12 @@ SizedBox(
       children: [
          Text(
           "Don't you have any account?",
-          style: TextStyle(fontSize: 12),
+          style: TextStyle(fontSize: 15),
         ),
          Text(
           'Sign up',
           style: TextStyle(
-            fontSize: 14,
+            fontSize: 18,
             color:  Color(0xFF7546C8),
             fontWeight: FontWeight.bold,
             decoration: TextDecoration.underline,
@@ -158,8 +159,6 @@ SizedBox(
     ),
   ),
 ),
-
-
 
               ],
             ),
