@@ -79,7 +79,10 @@ Text(
  ),
 
  SizedBox(height: 60,),
-
+Form(
+key: _formkey,
+child : Column(
+  children: [
 
 // Email TextFormFeild
  TextFormField(
@@ -115,7 +118,9 @@ TextFormField(
     return null;
   },
 ),
-
+              ]
+            ),
+),
 
 // Forget Password
 Align(
@@ -190,7 +195,8 @@ SizedBox(
     ),
   ),
 ),
-
+              
+            
               ],
             ),
             )
