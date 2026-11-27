@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gift_list_app/Colors/appcolour.dart';
+import 'package:gift_list_app/navigations/movepage.dart';
 
 class Signupscreen extends StatefulWidget {
   const Signupscreen({super.key});
@@ -31,7 +32,9 @@ class _SignupscreenState extends State<Signupscreen> {
               
             
                 // Back Button
-                IconButton(onPressed: (){},
+                IconButton(onPressed: (){
+                  Movepage.goToLoginpageback(context);
+                },
                  icon: Icon(
                   Icons.arrow_back,
                   size: 28,
@@ -126,6 +129,7 @@ class _SignupscreenState extends State<Signupscreen> {
                   SizedBox(height: 6,),
             
                   TextFormField(
+                    obscureText: true,
                     decoration: InputDecoration(
             hintText:"Enter your name",
               prefixIcon: Icon(Icons.lock_outline),
@@ -141,7 +145,9 @@ class _SignupscreenState extends State<Signupscreen> {
                     width: double.infinity,
                     height: 45,
                     child: ElevatedButton(
-            onPressed: (){}, 
+            onPressed: (){
+              Movepage.goToLogin(context);
+            }, 
             style: ElevatedButton.styleFrom(
               backgroundColor: MainColour.purple,
               foregroundColor: Colors.white,
@@ -174,7 +180,9 @@ class _SignupscreenState extends State<Signupscreen> {
               ),
               SizedBox(height: 1,),
               TextButton(
-                onPressed: (){},
+                onPressed: (){
+                  Movepage.goToLogin(context);
+                },
                  child: Text(
                   "Sign In",
                   style: TextStyle(

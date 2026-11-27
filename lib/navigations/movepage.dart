@@ -18,4 +18,8 @@ class Movepage {
     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> Signupscreen())
     );
   }
+   static void goToLoginpageback(BuildContext context){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=> Loginscreen())
+    );
+}
 }
