@@ -27,9 +27,44 @@ child: Column(
   crossAxisAlignment: CrossAxisAlignment.start,
   children: [
 
+    Text("hello"),
+
     // Back Button
     IconButton(onPressed: (){},
-     icon: Icon(Icons.arrow_back,size: 28,color: Colors.black,))
+     icon: Icon(
+      Icons.arrow_back,
+      size: 28,
+      color: Colors.black,
+      ),
+  padding: EdgeInsets.zero,
+                    alignment: Alignment.centerLeft,
+     ),
+
+     SizedBox(height: 15,),
+
+    //  Heading
+
+    Text(
+      "Create Account",
+      style: TextStyle(
+        fontSize: 25,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+      ),
+
+      SizedBox(height: 10,),
+
+      // Subtitle
+
+      Text(
+        "Join Gift List App to manage  gift ideas",
+        style: TextStyle(
+          fontSize: 15,
+           fontWeight: FontWeight.w600,
+                      color: Colors.black54,
+        ),
+      ),
   ],
 ),
           )
