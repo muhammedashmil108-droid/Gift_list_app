@@ -158,7 +158,7 @@ class _SignupscreenState extends State<Signupscreen> {
             ),
                   ),
             
-                  SizedBox(height: 25,),
+                  SizedBox(height: 20,),
             
                   // Already have an account
                   Center(
@@ -172,7 +172,7 @@ class _SignupscreenState extends State<Signupscreen> {
                               color: Colors.black87,
                             ),
               ),
-              SizedBox(height: 3,),
+              SizedBox(height: 1,),
               TextButton(
                 onPressed: (){},
                  child: Text(
