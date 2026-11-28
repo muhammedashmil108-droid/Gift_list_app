@@ -135,8 +135,8 @@ class _HomescreenState extends State<Homescreen> {
                     'Watch',
                     'For : Friend',
                     '₹1500',
-                    'Purchased',
-                    Colors.green,
+                   'Pending',
+                     Color.fromARGB(255, 255, 169, 9),
                   ),
 
 
@@ -148,8 +148,8 @@ class _HomescreenState extends State<Homescreen> {
                     'Watch',
                     'For : Friend',
                     '₹1500',
-                    'Purchased',
-                    Colors.green,
+                    'Pending',
+                     Color.fromARGB(255, 255, 169, 9),
                   ),
 
 
